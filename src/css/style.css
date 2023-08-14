@@ -14,7 +14,7 @@
 }
 
 .main__page {
-    margin-bottom: 150px;
+    margin-bottom: 20px;
 }
 
 .header {
@@ -120,7 +120,7 @@
 .promo {
     color: #FFF;
     min-height: 800px;
-    background: url('/src/img/uber_bg.png') center center no-repeat;
+    background: url('../img/uber_bg.png') center center no-repeat;
 }
 
 .promo__content {
@@ -167,11 +167,69 @@
     display: flex;
 }
 
-.block__advantage {
-    display: flex;
+.advantage__word {
+    width: 115px;
+    height: 27px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    padding: 8px 0;
+    color: #FFF;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 11px;
+    text-transform: uppercase;
+    background-color: black;
 }
 
+.advantage__h1 {
+    margin-bottom: 20px;
+    color: #222;
+    text-align: center;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+    text-transform: uppercase;
+}
+
+.advantages__column-2 {
+    padding-left: 50px;
+}
+
+.block__advantage {
+    display: flex;
+    margin: auto 0;
+    height: 150px;
+    margin-bottom: 30px;
+}
 
 .advantage__img {
     margin: auto 0;
+}
+
+.advantage__content {
+    width: 370px;
+    margin: auto 0;
+    margin-left: 30px;
+}
+
+/* .advantages__column-2 {
+    max-width: 500px;
+} */
+
+.advantage__title {
+    color: #1EACC7;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+.advantage__text {
+    color: #202020;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 21px;
 }
