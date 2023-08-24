@@ -251,11 +251,33 @@ $color6: #202020
 						line-height: 31px
 						text-transform: uppercase
 					.mobile__content-btn
-						display: flex
-						justify-content: center
+						cursor: pointer
+						display: inline-block;
 						position: absolute
 						bottom: 35px
 						left: 50%
+						height: 25px;
+						width: 25px;
+						background-color: black;
+						border-radius: 100%;
 						transform: translateX(-50%)
-						cursor: pointer
-
+						&::after
+							content: '';
+							width: 50%;
+							height: 2px;
+							display: block;
+							margin-top: 50%;
+							margin-left: 25%;
+							transform: translateY(-50%);
+							background-color: #17ADC8;
+						&::before
+							content: '';
+							position: absolute;
+							width: 2px;
+							height: 50%;
+							display: block;
+							margin-top: 25%;
+							margin-left: 50%;
+							transform: translateX(-50%);
+							background-color: #17ADC8;
+						
