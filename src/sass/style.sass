@@ -5,7 +5,7 @@ $color4: #222222
 $color5: #1EACC7
 $color6: #202020
 $color7: #FF6666
-$color8: #080816
+$color8: #020208
 
 
 @mixin toptitle__style
@@ -345,3 +345,25 @@ $color8: #080816
 					position: absolute
 					left: -30px
 					top: 4px
+
+.world
+	background-color: $color8
+	
+
+	.container 
+		background-image: url('../img/world_bg.png') 
+		padding: 45px 0 0px 0
+		.content
+			height: 550px
+			.toptitle
+				background-color: $color3
+				color: $color2
+			.title, .subtitle
+				color: $color3
+			.world__subtext
+				color: $color5
+				text-transform: uppercase
+				text-align: center
+				padding-top: 340px
+				font-size: 15px
+			
