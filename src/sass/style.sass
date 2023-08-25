@@ -5,6 +5,48 @@ $color4: #222222
 $color5: #1EACC7
 $color6: #202020
 
+@mixin toptitle__style
+	width: 115px
+	height: 27px
+	margin: 10px auto
+	margin-bottom: 25px
+	padding: 8px 0
+	color: $color3
+	font-size: 11px
+	font-weight: 400
+	line-height: 11px
+	text-align: center
+	text-transform: uppercase
+	background-color: black
+
+@mixin title__style
+	margin-bottom: 10px
+	color: $color4
+	font-size: 38px
+	font-weight: 700
+	line-height: 48px
+	text-align: center
+	font-style: normal
+	text-transform: uppercase
+
+@mixin subtitle__style
+	color: $color2
+	text-align: center
+	font-size: 18px
+	font-style: normal
+	font-weight: 400
+	line-height: 21px
+	
+.toptitle
+	@include toptitle__style
+
+.title
+	@include title__style
+
+.subtitle
+	@include subtitle__style
+	
+
 * 
 	font-family: "Roboto", sans-serif
 	box-sizing: border-box
@@ -149,135 +191,121 @@ $color6: #202020
 		padding: 0 50px
 	
 
-.advantages 
+.advantage 
 	display: flex
 	&__column-2 
 		padding-left: 50px
 		max-width: 500px		
-	
 
-.advantage__word,
-.opportunities__word
-	width: 115px
-	height: 27px
-	margin: 0 auto
-	margin-bottom: 45px
-	padding: 8px 0
-	color: $color3
-	text-align: center
-	font-size: 11px
-	font-weight: 400
-	line-height: 11px
-	text-transform: uppercase
-	background-color: black
+	&__block
+		display: flex
+		margin: auto 0
+		height: 150px
+		margin-bottom: 40px
 
-.advantage__h1,
-.mobile__h1
-	margin-bottom: 20px
-	color: $color4
-	text-align: center
-	font-size: 38px
-	font-style: normal
-	font-weight: 700
-	line-height: 48px
-	text-transform: uppercase
+	&__img 
+		margin: auto 0
 
-.block__advantage 
-	display: flex
-	margin: auto 0
-	height: 150px
-	margin-bottom: 40px
+	&__content 
+		width: 370px
+		margin: auto 0
+		margin-left: 30px
 
-.advantage__img 
-	margin: auto 0
-
-.advantage__content 
-	width: 370px
-	margin: auto 0
-	margin-left: 30px
-
-.advantage__title 
-	color: $color5
-	font-size: 17px
-	font-style: normal
-	font-weight: 400
-	line-height: 21px
-
-.advantage__text 
-	color: $color6
-	font-size: 15px
-	font-style: normal
-	font-weight: 300
-	line-height: 21px
-
-.mobile
-	background: url('../img/mobile_bg.png') center (center / cover) no-repeat
-	padding-top: 45px
-	&__text 
-		color: $color2
-		text-align: center
+	&__title 
+		color: $color5
 		font-size: 17px
 		font-style: normal
 		font-weight: 400
 		line-height: 21px
+
+	&__text 
+		color: $color6
+		font-size: 15px
+		font-style: normal
+		font-weight: 300
+		line-height: 21px
+
+.mobile
+	background: url('../img/mobile_bg.png') center (center / cover) no-repeat
+	padding: 45px 0
 	&__content
-		.row
-			.col-md-4
-				.mobile__content-block-1
-					background: url('../img/mobile_cards/card-1.png') center (center / cover) no-repeat
-				.mobile__content-block-2
-					background: url('../img/mobile_cards/card-2.png') center (center / cover) no-repeat
-				.mobile__content-block-3
-					background: url('../img/mobile_cards/card-3.png') center (center / cover) no-repeat
-				.mobile__content-block-4
-					background: url('../img/mobile_cards/card-4.png') center (center / cover) no-repeat
-				.mobile__content-block-5
-					background: url('../img/mobile_cards/card-5.png') center (center / cover) no-repeat
-				.mobile__content-block-6
-					background: url('../img/mobile_cards/card-6.png') center (center / cover) no-repeat
-				.mobile__content-block
-					width: 320px
-					height: 280px
-					margin: 0 auto
-					margin-bottom: 20px
-					padding: 92px 15px 0px 15px
-					position: relative
-					.mobile__content-text
-						color: $color3
-						text-align: center
-						font-size: 24px
-						font-style: normal
-						font-weight: 400
-						line-height: 31px
-						text-transform: uppercase
-					.mobile__content-btn
-						cursor: pointer
-						display: inline-block;
-						position: absolute
-						bottom: 35px
-						left: 50%
-						height: 25px;
-						width: 25px;
-						background-color: black;
-						border-radius: 100%;
-						transform: translateX(-50%)
-						&::after
-							content: '';
-							width: 50%;
-							height: 2px;
-							display: block;
-							margin-top: 50%;
-							margin-left: 25%;
-							transform: translateY(-50%);
-							background-color: #17ADC8;
-						&::before
-							content: '';
-							position: absolute;
-							width: 2px;
-							height: 50%;
-							display: block;
-							margin-top: 25%;
-							margin-left: 50%;
-							transform: translateX(-50%);
-							background-color: #17ADC8;
-						
+		.mobile__content-block-1
+			background: url('../img/mobile_cards/card-1.png') center (center / cover) no-repeat
+		.mobile__content-block-2
+			background: url('../img/mobile_cards/card-2.png') center (center / cover) no-repeat
+		.mobile__content-block-3
+			background: url('../img/mobile_cards/card-3.png') center (center / cover) no-repeat
+		.mobile__content-block-4
+			background: url('../img/mobile_cards/card-4.png') center (center / cover) no-repeat
+		.mobile__content-block-5
+			background: url('../img/mobile_cards/card-5.png') center (center / cover) no-repeat
+		.mobile__content-block-6
+			background: url('../img/mobile_cards/card-6.png') center (center / cover) no-repeat
+		.mobile__content-block
+			width: 320px
+			height: 280px
+			margin: 0 auto
+			margin-bottom: 20px
+			padding: 92px 15px 0px 15px
+			position: relative
+			.mobile__content-text
+				color: $color3
+				text-align: center
+				font-size: 24px
+				font-style: normal
+				font-weight: 400
+				line-height: 31px
+				text-transform: uppercase
+			.mobile__content-btn
+				cursor: pointer
+				display: inline-block;
+				position: absolute
+				bottom: 35px
+				left: 50%
+				height: 25px;
+				width: 25px;
+				background-color: black;
+				border-radius: 100%;
+				transform: translateX(-50%)
+				&::after
+					content: '';
+					width: 50%;
+					height: 2px;
+					display: block;
+					margin-top: 50%;
+					margin-left: 25%;
+					transform: translateY(-50%);
+					background-color: $color5;
+				&::before
+					content: '';
+					position: absolute;
+					width: 2px;
+					height: 50%;
+					display: block;
+					margin-top: 25%;
+					margin-left: 50%;
+					transform: translateX(-50%);
+					background-color: $color5;
+
+.chose
+	padding: 45px 0 150px 0
+	width: 100%
+	height: 100%
+	background: $color2 url("../img/mobile_bg.png") 0px 500px no-repeat;
+
+	.toptitle
+		background-color: $color3
+		color: $color2
+
+	.title, .subtitle
+		color: $color3
+
+	.img__car
+		text-align: center
+		padding-top: 45px
+
+	.subtext_car
+		text-align: center
+		font-size: 17px;
+		font-weight: 300;
+		line-height: 24px; 
