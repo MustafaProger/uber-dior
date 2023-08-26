@@ -348,8 +348,6 @@ $color8: #020208
 
 .world
 	background-color: $color8
-	
-
 	.container 
 		background-image: url('../img/world_bg.png') 
 		padding: 45px 0 0px 0
@@ -361,9 +359,84 @@ $color8: #020208
 			.title, .subtitle
 				color: $color3
 			.world__subtext
-				color: $color5
 				text-transform: uppercase
 				text-align: center
 				padding-top: 340px
 				font-size: 15px
+				a
+					color: $color5
+
+
+.footer
+	padding-bottom: 30px
+	.line
+		color: $color2
+		width: 300px
+		margin: 20px auto
+		text-align: center
+		border: none
+		border-top: 4px $color5 solid;
+	.content
+		display: flex
+		justify-content: space-around
+	.content > div
+		width: 33%
+		&::nth-child(3)
+			display: flex
+			justify-content: end
+		.media
+			padding-top: 25px
+			display: flex
+			.facebook
+				padding: 2.5px 6px
+				margin-left: 25px !important
+			.twitter
+				padding: 2.5px 6px
+			.linkdedin
+				padding: 2.5px 9px
+			.instagram
+				padding: 2.5px 8px
+			.media__item
+				position: relative
+				margin-left: 10px
+				&::before
+					content: ''
+					position: absolute
+					top: 0
+					left: 0
+					z-index: -1
+					width: 32px
+					height: 32px
+					display: block
+					background-color: $color8
+					border-radius: 100%
+		.link
+			width: 400px
+			margin: 0 auto
+			.toplink
+				display: flex
+				justify-content: space-around
+				.toplink__item
+					color: #070716;
+					font-size: 15px;
+					font-weight: 300;
+					line-height: 68px; 
+					text-transform: uppercase;
+			.sublink
+				display: flex
+				justify-content: space-between
+				.sublink__item
+					color: #999;
+					font-size: 11px;
+					font-weight: 300;
+					text-transform: uppercase;
+			.language
+				margin: 10px auto
+				text-align: center
+
+				a 
+					color: $color5
+		.downolad
+			text-align: right
+			margin-right: 25px !important
 			
