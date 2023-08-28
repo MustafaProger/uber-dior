@@ -1,4 +1,17 @@
 @media (max-width: 767px) {
+    .logo_without_text {
+        position: relative;
+    }
+
+    .logo_without_text::before {
+        content: "U B E R";
+        color: #fff;
+        position: absolute;
+        display: block;
+        z-index: 15;
+        top: 15px;
+        left: 0;
+    }
 
     .top__header {
         display: flex;
@@ -7,8 +20,19 @@
         margin-right: 0;
         top: 0;
         left: 0;
+        z-index: 2;
     }
 
+    .top__header:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #2b3035;
+        z-index: 2;
+    }
     .header__burger {
         display: block;
         position: relative;
@@ -81,5 +105,8 @@
         margin: 0 0 20px 0;
     }
 
+    body .lock {
+        overflow: hidden;
+    }
 
 }

@@ -1,4 +1,4 @@
-$color1: #212121
+$color1: #2b3035
 $color2: #000000
 $color3: #FFFFFF
 $color4: #222222
@@ -9,7 +9,8 @@ $color8: #020208
 
 
 @mixin toptitle__style
-	width: 115px
+	max-width: 115px
+	width: 100%
 	height: 27px
 	margin: 10px auto
 	margin-bottom: 25px
@@ -53,8 +54,7 @@ $color8: #020208
 * 
 	font-family: "Roboto", sans-serif
 	box-sizing: border-box
-	&__column-2 
-		max-width: 500px
+
 	
 
 .grid 
@@ -71,16 +71,18 @@ $color8: #020208
 
 .header 
 	position: fixed
+	top: 0
+	left: 0
 	z-index: 5
 	width: 100%
+
 	&__list 
 		display: flex
 		justify-content: space-between
 		list-style-type: none
 		padding: 15px 50px
 		li 
-			padding: 0 20px
-			border-right: 2px dotted $color2
+			padding: 0 10px
 		
 	
 	&__link 
@@ -95,6 +97,7 @@ $color8: #020208
 	width: 100%
 	height: 53px
 	background-color: $color1
+	
 
 .container 
 	max-width: 1140px
@@ -103,12 +106,11 @@ $color8: #020208
 .subheader 
 	position: absolute
 	width: 100%
-	height: 87px
 	background-color: rgba(0, 0, 0, 0.6)
 	.subheader__logo 
 		display: block
-		max-width: 100%
 		margin-top: 16px
+
 	
 	&__call 
 		display: block
@@ -194,23 +196,26 @@ $color8: #020208
 
 .advantage 
 	display: flex
-	&__column-2 
-		padding-left: 50px
-		max-width: 500px		
+	padding-bottom: 150px
+
+	&__column-1
+		margin: a
 
 	&__block
 		display: flex
 		margin: auto 0
-		height: 150px
-		margin-bottom: 40px
+		height: 25%
+		padding: 10px 0
 
 	&__img 
 		margin: auto 0
 
 	&__content 
-		width: 370px
+		max-width: 570px
+		width: 100%
 		margin: auto 0
 		margin-left: 30px
+
 
 	&__title 
 		color: $color5
@@ -304,6 +309,7 @@ $color8: #020208
 	.img__car
 		text-align: center
 		padding-top: 45px
+		max-width: 100%
 
 	.subtext_car
 		text-align: center
@@ -440,3 +446,132 @@ $color8: #020208
 			text-align: right
 			margin-right: 25px !important
 			
+
+@media (max-width: 1135px) 
+
+	.logo
+		width: 90%
+		height: 90%
+		
+
+	.header__link
+		font-size: 90%
+	.btn__1
+		margin-left: 0px
+		.subheader__call-btn
+			margin-left: 0
+
+	.promo__header
+		font-size: 49px
+
+@media (max-width: 930px) 
+
+	.header__link
+		font-size: 12px
+
+	.text__call
+		font-size: 10px
+
+	.subheader__call 
+		font-size: 17px
+
+	.btn__1
+		margin-left: 0px
+		.subheader__call-btn
+			margin-left: 0
+			font-size: 12px
+			line-height: 40px
+
+	.text__logo
+		font-size: 12px
+
+	.promo__header
+		font-size: 40px
+
+	.promo__subheader
+		font-size: 25px
+
+	.promo__text
+		font-size: 16px
+
+	.promo__btn
+		font-size: 15px
+		margin-top: 70px
+
+	
+@media (max-width: 813px) 
+	.header__link
+		font-size: 11px
+
+	.btn__1
+		margin-left: 0
+		.subheader__call-btn
+			font-size: 10px
+			line-height: 35px
+			margin: 17px 0
+
+	.text__logo
+		font-size: 10px
+
+@media (max-width: 767px)
+	.header__list
+		padding-left: 15px;
+		.header__link
+			font-size: 20px
+
+	.subheader
+		.row
+			.btn__1, .offset-md-2
+				width: 50%
+				padding: 0 15px
+			
+			.btn__1
+				text-align: right;
+				
+			.subheader__logo, .text__logo
+				display: none
+
+
+			.subheader__call, .text__call
+				text-align: revert
+			
+			.subheader__call
+				font-size: 20px
+			
+			.text__call
+				font-size: 12px
+			
+			.subheader__call-btn
+				margin-left: 0
+				font-size: 12px
+				line-height: 45px
+			
+	.promo__header
+		font-size: 30px
+
+	.promo__subheader
+		font-size: 17px
+		line-height: 30px
+
+	.promo__text
+		font-size: 14px
+
+	.promo__btn
+		font-size: 13px
+		margin-top: 40px
+		
+@media (max-width: 370px) 
+	.subheader
+		.row
+			.btn__1
+				width: 55%
+				padding: 0 
+			.offset-md-2
+				width: 45%
+				padding: 0 
+			.subheader__call
+				font-size: 18px
+			.subheader__call-btn
+				margin-left: 0
+				font-size: 10px
+				line-height: 45px
