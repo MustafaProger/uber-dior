@@ -73,7 +73,6 @@
             right: 0
             width: 290px
             transition: ease-in .3s
-
     .header__list 
         display: flex
         flex-direction: column
@@ -83,11 +82,10 @@
             margin: 0 0 20px 0
     body
         transition: ease-in .3s
-
-    body.lock 
-        background-color: rgba(0,0,0,0.5)
-        overflow: hidden
-    .subheader.lock,
-    .promo.lock
-        filter: brightness(50%)
+        &.lock 
+            background-color: rgba(0,0,0,0.5)
+            overflow: hidden
+        .subheader.lock,
+        .promo.lock
+            filter: brightness(50%)
 
