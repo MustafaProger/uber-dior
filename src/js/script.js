@@ -7,5 +7,6 @@ $(document).ready(function () {
         $(".promo").toggleClass('lock')
         $(".advantage").toggleClass('lock')
         $(".mobile").toggleClass('lock')
+        $(".chose").toggleClass('lock')
     });
 });
