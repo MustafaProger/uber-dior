@@ -8,5 +8,7 @@ $(document).ready(function () {
         $(".advantage").toggleClass('lock')
         $(".mobile").toggleClass('lock')
         $(".chose").toggleClass('lock')
+        $(".condition").toggleClass('lock')
+
     });
 });
