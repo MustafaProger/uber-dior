@@ -17,6 +17,7 @@
         top: 0
         left: 0
         z-index: 2
+
         &::before 
             content: ""
             position: absolute
@@ -83,9 +84,15 @@
     body
         transition: ease-in .3s
         &.lock 
-            background-color: rgba(0,0,0,0.5)
             overflow: hidden
+        .subheader,
+        .promo,
+        .advantage,
+        .mobile
+            transition: ease-in .3s
         .subheader.lock,
-        .promo.lock
-            filter: brightness(50%)
-
+        .promo.lock,
+        .advantage.lock,
+        .mobile.lock
+            filter: brightness(50%) 
+            background-color: rgba(0, 0, 0, 0.5)

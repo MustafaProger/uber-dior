@@ -5,5 +5,7 @@ $(document).ready(function () {
         $("body").toggleClass('lock')
         $(".subheader").toggleClass('lock')
         $(".promo").toggleClass('lock')
+        $(".advantage").toggleClass('lock')
+        $(".mobile").toggleClass('lock')
     });
 });
