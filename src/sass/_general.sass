@@ -5,6 +5,9 @@
 .subtitle
 	@include subtitle__style
 
+a
+	text-decoration: none !important
+
 .grid 
 	position: fixed
 	top: 0
@@ -37,9 +40,9 @@
 	&__link 
 		color: white
 		font-size: 16px
-		transition: all .25s ease-in-out 0s
+		transition: all .3s ease-in-out 0s
 		&:hover 
-			color: royalblue
+			color: $color5
 			text-decoration: none
 	.top__header 
 		position: fixed
@@ -224,6 +227,7 @@
 	width: 100%
 	height: 100%
 	background: $color2 url("../img/mobile_bg.png") 0px 500px no-repeat
+	background-size: 100%
 	.toptitle
 		background-color: $color3
 		color: $color2
@@ -279,7 +283,7 @@
 .world
 	background-color: $color8
 	.container 
-		background-image: url('../img/world_bg.png') 
+		background: url('../img/world_bg.png') center (center / cover) no-repeat 
 		padding: 45px 0 0px 0
 		.content
 			height: 550px
@@ -289,81 +293,84 @@
 			.title, .subtitle
 				color: $color3
 			.world__subtext
+				font-size: 15px
 				text-transform: uppercase
 				text-align: center
 				padding-top: 340px
-				font-size: 15px
 				a
 					color: $color5
-
+					text-decoration: none
+					transition: all .25s ease-in-out 0s
+					&:hover
+						font-size: 16px
 .footer
-	padding-bottom: 30px
+	position: relative
+	padding: 20px 0
 	.line
-		color: $color2
 		width: 300px
-		margin: 20px auto
+		margin: 20px auto 0 auto
+		color: $color2
 		text-align: center
 		border: none
-		border-top: 4px $color5 solid;
+		border-top: 4px $color5 solid
 	.content
 		display: flex
-		justify-content: space-around
-	.content > div
-		width: 33%
-		&::nth-child(3)
+	.row
+		--bs-gutter-x: 0rem
+		margin-left: 0
+		margin-right: 0
+	.media
+		display: flex
+		padding-top: 25px
+		.facebook
+			padding: 2.5px 6px
+			margin-left: 25px !important
+		.twitter
+			padding: 2.5px 6px
+		.linkdedin
+			padding: 2.5px 9px
+		.instagram
+			padding: 2.5px 8px
+		.media__item
+			position: relative
+			margin-left: 10px
+			&::before
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				z-index: -1
+				width: 32px
+				height: 32px
+				display: block
+				background-color: $color8
+				border-radius: 100%
+	.link
+		text-align: center
+		.toplink
+			.toplink__item
+				color: #070716
+				font-size: 15px
+				font-weight: 300
+				line-height: 68px 
+				text-transform: uppercase
+		.sublink
+			text-align: center
+			.sublink__item
+				color: #999
+				font-size: 11px
+				font-weight: 300
+				text-transform: uppercase
+				padding: 0 2px
+		.language
 			display: flex
-			justify-content: end
-		.media
-			padding-top: 25px
-			display: flex
-			.facebook
-				padding: 2.5px 6px
-				margin-left: 25px !important
-			.twitter
-				padding: 2.5px 6px
-			.linkdedin
-				padding: 2.5px 9px
-			.instagram
-				padding: 2.5px 8px
-			.media__item
-				position: relative
-				margin-left: 10px
-				&::before
-					content: ''
-					position: absolute
-					top: 0
-					left: 0
-					z-index: -1
-					width: 32px
-					height: 32px
-					display: block
-					background-color: $color8
-					border-radius: 100%
-		.link
-			width: 400px
-			margin: 0 auto
-			.toplink
-				display: flex
-				justify-content: space-around
-				.toplink__item
-					color: #070716
-					font-size: 15px
-					font-weight: 300
-					line-height: 68px 
-					text-transform: uppercase
-			.sublink
-				display: flex
-				justify-content: space-between
-				.sublink__item
-					color: #999
-					font-size: 11px
-					font-weight: 300
-					text-transform: uppercase
-			.language
-				margin: 10px auto
-				text-align: center
-				a 
-					color: $color5
-		.downolad
-			text-align: right
-			margin-right: 25px !important
+			justify-content: center
+			margin: 10px 0
+			a 
+				color: $color5
+	.download
+		display: flex
+		justify-content: flex-end
+		padding-right: 22px
+		.download__item
+			padding: 0 3px

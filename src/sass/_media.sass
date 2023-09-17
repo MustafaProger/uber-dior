@@ -33,8 +33,33 @@
 	.chose
 		.img__car
 			img
-				width: 100%
+				width: 70%
 				height: auto
+	
+	.footer 
+		.media
+			.facebook
+				margin-left:0 !important
+		.download
+			position: relative
+			top: -5px
+			left: 0
+			display: flex
+			flex-direction: column
+			align-items: flex-end
+			.download__item
+				position: absolute
+				top: 0
+				right: 15px
+				width: 100%
+				height: 100%
+				display: flex
+				justify-content: right
+	a#download__item_2
+		margin-top: 35px 
+	a#download__item_3
+		margin-top: 70px 
+
 
 @media (max-width: 930px) 
 	.header
@@ -97,7 +122,12 @@
 			font-size: 17px
 		.list__item
 			font-size: 16px
-				
+	
+	.world
+		.title
+			font-size: 26px
+		.subtitle
+			font-size: 16px			
 
 @media (max-width: 813px) 
 	.header
@@ -185,10 +215,55 @@
 		padding: 25px 0 80px 0
 		.subtitle
 			font-size: 15px
+		.img__car
+			img
+				width: 100%
+
 	.condition
 		padding: 25px 0 
 		.list__item
 			font-size: 15px
+
+	.world
+		.subtitle
+			font-size: 15px
+	
+	.footer
+		.col-md-3,
+		.col-md-6
+			display: flex
+		
+		.order_media
+			order: 2
+		.order_link
+			order: 1
+		.order_download
+			order: 3
+
+		.media
+			max-width: 154px
+			margin: 0 auto
+		.link
+			margin: 0 auto
+
+		.download
+			position: relative
+			top: 0
+			left: 0
+			display: flex
+			flex-direction: row
+			max-width: 260px
+			margin: 0 auto
+			padding-right: 0px
+			.download__item
+				position: relative
+				top: 0
+				left: 0
+				display: flex
+	a#download__item_2
+		margin-top: 35px 
+	a#download__item_3
+		margin-top: 70px 
 		
 @media (max-width: 375px) 
 	.subheader
@@ -242,3 +317,13 @@
 			color: white
 		.img__car 
 				padding-top: 25px
+
+	.footer
+		.link
+			.toplink
+				margin-bottom: -10px
+				.toplink__item
+					font-size: 13px
+			.sublink
+				.sublink__item
+					font-size: 12px

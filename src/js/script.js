@@ -9,6 +9,7 @@ $(document).ready(function () {
         $(".mobile").toggleClass('lock')
         $(".chose").toggleClass('lock')
         $(".condition").toggleClass('lock')
-
+        $(".world").toggleClass('lock')
+        $(".footer").toggleClass('lock')
     });
 });
