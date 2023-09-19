@@ -13,3 +13,24 @@ $(document).ready(function () {
         $(".footer").toggleClass('lock')
     });
 });
+
+
+function scrollTo(element) {
+    window.scroll({
+        left: 0,
+        top: element.offsetTop,
+        behavior: "smooth",
+    })
+}
+
+window.onload=function(){
+
+    // Плавная прокрутка принажатии на кнопку "Читать далее"
+    let read_more_button = document.querySelector(".read_more_button");
+    let about_us_1 = document.querySelector("#about_us");
+
+    read_more_button.addEventListener('click', () => {
+        scrollTo(about_us_1);
+        console.log('Все работает');
+    }); 
+}
