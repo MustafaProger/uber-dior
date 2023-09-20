@@ -11,6 +11,8 @@ $(document).ready(function () {
         $(".condition").toggleClass('lock')
         $(".world").toggleClass('lock')
         $(".footer").toggleClass('lock')
+        $(".cities").toggleClass('lock')
+        $(".yourcar").toggleClass('lock')
     });
 });
 
