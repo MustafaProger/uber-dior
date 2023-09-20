@@ -34,10 +34,10 @@
                     </div>
                     <nav class="header__menu">
                         <ul class="header__list">
-                            <li><a href="" class="header__link">Главная</a></li>
+                            <li><a href="#promo" class="header__link">Главная</a></li>
                             <li><a href="" class="header__link">Со своим автомобилем</a></li>
                             <li><a href="" class="header__link">На автомобили компании</a></li>
-                            <li><a href="" class="header__link">Требования</a></li>
+                            <li><a href="" class="header__link" id="header__link__condition">Требования</a></li>
                             <li><a href="" class="header__link">Контакты</a></li>
                             <li><a href="" class="header__link">Оставить заявку</a></li>
                         </ul>
@@ -52,19 +52,20 @@
                             <a href="" class="logo__link"><img src="../src/img/logo.png" alt="" class="logo"></a>
                             <p class="logo__text">Официальный партнер Uber в Москве</p>
                         </div>
-                        <div class="col-md-2 offset-md-2 call__text__phone">
+                        <div class="col-md-3 offset-md-2 call__text__phone">
                             <p class="call__text">Звоните нам ежедневно</p>
                             <a href="tel:8338738237" class="phone">833-873-8237</a>
                         </div>
                         <div class="col-md-3 call-btn">
-                            <button href="tel:74957970988" class="btn">Заказать звонок</button>
+                            <a href="tel:8338738237" class="phone"><button href=" tel:74957970988" class="btn">Заказать
+                                звонок</button></a>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
 
-        <section class="promo" data-aos="face-down" data-aos-once="true">
+        <section class="promo" id="promo" data-aos="face-down" data-aos-once="true">
             <div class="container">
                 <div class="row">
                     <div class="col-md-10 offset-md-1 promo__content">
@@ -270,7 +271,7 @@
         </div>
     </section>
 
-    <section class="condition" data-aos="fade-down" data-aos-once="true">
+    <section class="condition" id="condition" data-aos="fade-down" data-aos-once="true">
         <div class="container">
             <p class="toptitle">возможности</p>
             <h1 class="title">условия и требования</h1>
@@ -325,7 +326,7 @@
                 <h1 class="title">По всему миру</h1>
                 <p class="subtitle">Мы в вашем городе и по всему миру</p>
                 <div class="world__subtext">
-                    <a href="cities.html" class="">посмореть все города</a>
+                    <a href="cities.html" target="_blank" class="">посмореть все города</a>
                 </div>
             </div>
         </div>
@@ -353,7 +354,7 @@
                 <div class="link">
                     <div class="toplink">
                         <a href="#" class="toplink__item">На главную</a>
-                        <a href="#" class="toplink__item" style="padding: 0 10px">Города</a>
+                        <a href="cities.html" class="toplink__item" style="padding: 0 10px">Города</a>
                         <a href="#" class="toplink__item">Для водителей</a>
                     </div>
                     <div class="sublink">

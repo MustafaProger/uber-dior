@@ -26,11 +26,11 @@ function scrollTo(element) {
 window.onload=function(){
 
     // Плавная прокрутка принажатии на кнопку "Читать далее"
-    let read_more_button = document.querySelector(".read_more_button");
-    let about_us_1 = document.querySelector("#about_us");
+    let header__link__condition = document.querySelector("#header__link__condition");
+    let condition = document.querySelector("#condition");
 
-    read_more_button.addEventListener('click', () => {
-        scrollTo(about_us_1);
+    header__link__condition.addEventListener('click', () => {
+        scrollTo(condition);
         console.log('Все работает');
     }); 
 }
