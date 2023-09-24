@@ -81,10 +81,38 @@
         opacity: 1
         li 
             margin: 0 0 20px 0
+    .header 
+        &__list 
+            li 
+            .dropdown
+                position: relative
+                top: 0
+                left: 0
+                .dropdown-menu
+                    display: none
+                    background: none
+                    border: none
+                    margin-top: 10px
+                    li
+                        margin: 0 0 0 30px
+                    .dropdown-item
+                        margin: 0
+                        text-align: left
+                        &:hover
+                            background: none
+                            color: #1EACC7
+                .dropdown-menu.show
+                    display: inline-block
+                    position: relative
+                    top: 0
+                    left: 0
+                    width: 100%
+                
     body
         transition: ease-in .3s
         &.lock 
             overflow: hidden
+            background-color: rgba(0, 0, 0, 0.5)
         .subheader,
         .promo,
         .advantage,
@@ -107,8 +135,11 @@
         .cities.lock,
         .yourcar.lock
             filter: brightness(50%)
-            background-color: rgba(0, 0, 0, 0.5)
+            background-color: rgba(0, 0, 0, 0)
         .chose.lock,
         .cities.lock,
         .yourcar.lock
             background-color: rgba(0, 0, 0, 1)
+        .footer.lock
+            filter: brightness(70%)
+            background-color: rgba(0, 0, 0, 0)

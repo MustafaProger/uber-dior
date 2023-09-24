@@ -9,15 +9,6 @@ a
 	text-decoration: none !important
 	transition: all .3s ease-in-out 0s
 
-.grid 
-	position: fixed
-	top: 0
-	right: 0
-	bottom: 0
-	left: 0
-	z-index: -1
-	text-align: center
-
 .main__page 
 	margin-bottom: -10px
 
@@ -38,12 +29,38 @@ a
 		padding: 23px 0px
 		li 
 			padding: 0 10px
+		.dropdown
+			position: relative
+			top: 0
+			left: 0
+			.dropdown-menu
+				display: none
+				padding: 10px 0
+				border-radius: 10px
+				list-style-type: none
+				background-color: $color5
+				li
+					padding: 0
+				.dropdown-item
+					text-align: center
+					padding: 10px
+					color: $color3
+					&:hover
+						background: none
+						color: $color1
+			.dropdown-menu.show
+				display: inline-block
+				position: absolute
+				left: -20px
+				top: 43px
+				width: 180px
 	&__link 
-		color: white
+		color: white !important
 		font-size: 18px
 		transition: all .3s ease-in-out 0s
 		&:hover 
-			color: $color5
+			cursor: pointer
+			color: $color5 !important
 			text-decoration: none
 	.top__header 
 		position: fixed
@@ -105,7 +122,6 @@ a
 	.call__text__phone
 		padding-left: 0
 		margin-left: auto
-
 
 .promo 
 	color: $color3
@@ -314,8 +330,7 @@ a
 						font-size: 16px
 .footer
 	position: relative
-	padding-top: 10px
-	padding-bottom: 20px
+	padding: 10px 0 20px 0
 	.line
 		width: 300px
 		margin: 20px auto 0 auto
@@ -389,3 +404,21 @@ a
 		padding-right: 22px
 		.download__item
 			padding: 0 3px
+
+#header__link::after 
+	content: ""
+	width: 10px
+	height: 10px
+	position: absolute
+	left: 0
+	top: 0
+	margin: 10px 0 10px 100px
+	border-left: 5px solid transparent
+	border-right: 5px solid transparent
+	border-top: 5px solid $color3
+	z-index: 1
+	opacity: 1
+	transition: all .3s ease-in-out 0s
+
+#header__link:hover::after
+		border-top: 5px solid $color5

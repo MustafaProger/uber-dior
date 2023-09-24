@@ -16,7 +16,6 @@ $(document).ready(function () {
     });
 });
 
-
 function scrollTo(element) {
     window.scroll({
         left: 0,
@@ -27,12 +26,11 @@ function scrollTo(element) {
 
 window.onload=function(){
 
-    // Плавная прокрутка принажатии на кнопку "Читать далее"
-    let header__link__condition = document.querySelector("#header__link__condition");
-    let condition = document.querySelector("#condition");
+    let IDname = document.querySelector("#id");
+    let scrollIDname = document.querySelector("#id");
 
-    header__link__condition.addEventListener('click', () => {
-        scrollTo(condition);
+    IDname.addEventListener('click', () => {
+        scrollTo(scrollIDname);
         console.log('Все работает');
     }); 
 }

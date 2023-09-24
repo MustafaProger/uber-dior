@@ -1,7 +1,7 @@
 @media (max-width: 1200px) 
 	.header
 		.header__link
-			font-size: 105%
+			font-size: 99%
 		.logo__block
 			.logo
 				width: 90%
@@ -59,7 +59,8 @@
 		margin-top: 35px 
 	a#download__item_3
 		margin-top: 70px 
-
+	#header__link::after 
+		margin: 10px 0 10px 90px;
 
 @media (max-width: 930px) 
 	.header
@@ -143,6 +144,12 @@
 		.subtitle
 			font-size: 16px
 
+	#header__link
+		padding: 0 0 0 10px
+
+	#header__link:after 
+		margin-left: 120px
+		margin-top: 12px
 
 @media (max-width: 813px) 
 	.header
