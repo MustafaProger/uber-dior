@@ -1,15 +1,15 @@
 @media (max-width: 1200px) 
-	.header
-		.header__link
-			font-size: 99%
-		.logo__block
-			.logo
-				width: 90%
-				height: 90%
-		.call-btn
-			margin-left: 0px
-			.btn
-				margin-left: 0
+
+	.header__link
+		font-size: 99%
+	.logo__block
+		.logo
+			width: 90%
+			height: 90%
+	.call-btn
+		margin-left: 0px
+		.btn
+			margin-left: 0
 	.promo__header
 		font-size: 49px
 
@@ -63,40 +63,42 @@
 		margin: 10px 0 10px 90px;
 
 @media (max-width: 930px) 
-	.header
-		.header__link
-			font-size: 20px
-			display: 
-			padding: 10px 10px
-		.subheader 
-			height: 75px
-			top: 54px
-			.row
-				position: relative
+
+	.header__link
+		font-size: 20px
+		display: 
+		padding: 10px 10px
+	.subheader 
+		height: 75px
+		top: 54px
+		.row
+			position: relative
+			top: 0
+			left: 0
+			justify-content: space-between
+			.logo__block
+				margin-left: 0
+				.logo__text
+					font-size: 11px
+			.call__text__phone
+				position: absolute
+				right: 20%
 				top: 0
-				left: 0
-				justify-content: space-between
-				.logo__block
-					margin-left: 0
-					.logo__text
-						font-size: 11px
-				.call__text__phone
-					position: absolute
-					right: 20%
-					top: 0
-					.call__text
-						font-size: 10px
-					.phone
-						font-size: 19px
-				.call-btn
-					margin-left: 0px
-					.phone
-						text-align: right
-						margin-right: 15px
-						.btn
-							font-size: 12px
-							line-height: 40px
+				.call__text
+					font-size: 10px
+				.phone
+					font-size: 19px
+			.call-btn
+				margin-left: 0px
+				.phone
+					text-align: right
+					margin-right: 15px
+					.btn
+						font-size: 12px
+						line-height: 40px
 	.promo
+		&__content 
+			margin-top: 180px
 		.promo__header
 			font-size: 40px
 		.promo__subheader
@@ -152,44 +154,44 @@
 		margin-top: 12px
 
 @media (max-width: 813px) 
-	.header
-		.subheader
-			.logo__block
-				.logo__text
-					font-size: 10px
-			.call-btn
-				.btn
-					margin-left: 0
-					font-size: 10px
-					line-height: 40px
+
+	.subheader
+		.logo__block
+			.logo__text
+				font-size: 10px
+		.call-btn
+			.btn
+				margin-left: 0
+				font-size: 10px
+				line-height: 40px
 
 @media (max-width: 767px)
-	.header
-		.subheader
-			.row
-				.call-btn, .call__text__phone
-					width: 50%
-					padding: 0 10px
-				.call__text__phone
-					position: relative
-					right: 0
-					top: 0
-				.call-btn
-					text-align: right
-					.phone
-						margin: 0
-						text-align: right
-						.btn
-							font-size: 11px
-							margin: 15px 0 0 0
-				.logo__link, .logo__text
-					display: none
-				.phone, .call__text
-					text-align: revert
+
+	.subheader
+		.row
+			.call-btn, .call__text__phone
+				width: 50%
+				padding: 0 10px
+			.call__text__phone
+				position: relative
+				right: 0
+				top: 0
+			.call-btn
+				text-align: right
 				.phone
-					font-size: 20px
-				.call__text
-					font-size: 12px
+					margin: 0
+					text-align: right
+					.btn
+						font-size: 11px
+						margin: 15px 0 0 0
+			.logo__link, .logo__text
+				display: none
+			.phone, .call__text
+				text-align: revert
+			.phone
+				font-size: 20px
+			.call__text
+				font-size: 12px
 
 	.promo
 		padding: 0 0 50px 0		
@@ -204,28 +206,45 @@
 			font-size: 13px
 			margin-top: 40px
 
+	// .advantage
+	// 	padding: 30px 0
+	// 	.container
+	// 		margin: 0
+	// 		padding: 0px 5px 0 15px
+	// 		.toptitle
+	// 		.title
+	// 			line-height: 40px
+	// 			padding: 10px 0
+	// 		.advantage__block
+	// 			flex-direction: column
+	// 			margin: 0px auto
+	// 			padding: 0
+	// 			width: 100%
+	// 			.advantage__img
+	// 				margin: 0 auto
+	// 			.advantage__content
+	// 				margin: 0 auto
+	// 				padding: 0
+	// 				text-align: left
+	// 				.advantage__content-text
+	// 					padding: 0 0 20px 0
+
 	.advantage
-		padding: 30px 0
-		.container
-			margin: 0
-			padding: 0px 5px 0 15px
-			.toptitle
+		.row
+			margin: 0 auto
 			.title
-				line-height: 40px
-				padding: 10px 0
+				font-size: 90%
 			.advantage__block
 				flex-direction: column
+				max-width: 570px
 				margin: 0px auto
-				padding: 0
-				min-width: 225px
+				height: auto !important
 				.advantage__img
-					margin: 0 auto
+					display: none
 				.advantage__content
-					margin: 0 auto
-					padding: 0
-					text-align: left
-					.advantage__content-text
-						padding: 0 0 20px 0
+					margin: 0		
+			.advantages__column-1
+				margin-bottom: 0px
 	.mobile
 		.subtitle
 			font-size: 15px
@@ -309,23 +328,23 @@
 			line-height: 45px
 			margin-top: 40px
 
-	.advantage
-		.row
-			margin: 0 auto
-			.toptitle
-			.title
-				font-size: 10px
-			.advantage__block
-				margin: 0px auto
-				padding: 0
-				height: auto !important
-				.advantage__img
-					display: none
-				.advantage__content
-					margin: 0
-			.advantages__column-1, .row
-				margin-bottom: 0px
-				padding-left: 0px 
+	// .advantage
+	// 	.row
+	// 		margin: 0 auto
+	// 		.toptitle
+	// 		.title
+	// 			font-size: 10px
+	// 		.advantage__block
+	// 			margin: 0px auto
+	// 			padding: 0
+	// 			height: auto !important
+	// 			.advantage__img
+	// 				display: none
+	// 			.advantage__content
+	// 				margin: 0
+	// 		.advantages__column-1, .row
+	// 			margin-bottom: 0px
+	// 			padding-left: 0px 
 				
 	.chose
 		padding: 25px 0
