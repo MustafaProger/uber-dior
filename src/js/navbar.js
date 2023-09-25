@@ -5,6 +5,7 @@ document.getElementById("navbar").innerHTML = '\
             <div class="container">\
                 <div class="logo_without_text"></div>\
                 <div class="header__burger">\
+                <span></span>\
                 </div>\
                 <nav class="header__menu">\
                     <ul class="header__list">\
@@ -19,7 +20,7 @@ document.getElementById("navbar").innerHTML = '\
                         <ul class="dropdown-menu">\
                             <li><a class="dropdown-item" href="tel:+79680603084">+7 (968) 060-30-84</a></li>\
                             <li><a class="dropdown-item" href="tel:+79680603084">+7 (968) 312-75-22</a></li>\
-                            <li><a class="dropdown-item" href="tel:+79680603084">+7 (968) 102-87-53</a></li>\
+                            <li><a class="dropdown-item dropdown-item_3" href="tel:+79680603084">+7 (968) 102-87-53</a></li>\
                         </ul>\
                     </li>\
                         <li><a href="" class="header__link">Оставить заявку</a></li>\
