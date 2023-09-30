@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="src/icons/uber_icon_130805.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="src/bootstrap/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="src/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="src/css/burger.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="src/js/script.js"></script>
+    <title>On our car</title>
+</head>
+
+<body>
+
+
+    <main class="main__page">
+        <header class="header">
+            <div class="top__header">
+                <div class="container">
+                    <div id="modal-content">
+                        <p>Хочешь darkmode (lightmode), тогда поменяй тему на своем устройстве и он будет активирован!</p>
+                        <a id="modal-close" href="#close">Ого, прикольно</a>
+                    </div>
+                    <div class="logo_without_text"></div>
+                    <div class="header__burger">
+                        <span></span>
+                    </div>
+                    <nav class="header__menu">
+                        <ul class="header__list">
+                            <li><a href="index.html#promo" class="header__link">Главная</a></li>
+                            <li><a href="yourcar.html" class="header__link">Со своим автомобилем</a></li>
+                            <li><a href="ourcar.html" class="header__link">На автомобили компании</a></li>
+                            <li><a href="index.html#condition" class="header__link">Требования</a></li>
+                            <li class="dropdown navbar">
+                                <a class="header__link" id="header__link" data-bs-toggle="dropdown"
+                                    aria-expanded="false">Контакты</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="tel:+79680603084">+7 (968) 060-30-84</a></li>
+                                    <li><a class="dropdown-item" href="tel:+79680603084">+7 (968) 312-75-22</a></li>
+                                    <li><a class="dropdown-item dropdown-item_3" href="tel:+79680603084">+7 (968)
+                                            102-87-53</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="" class="header__link">Оставить заявку</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+    </main>
+
+    <style>
+        :root {
+            --var-body-bg: #fff;
+            --var-body-fc: #333;
+            --var-header-bg: #eee;
+            --var-header-link: #000;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --var-body-bg: #333;
+                --var-body-fc: #fff;
+                --var-header-bg: #eee;
+                --var-header-link: #fff;
+            }
+        }
+
+        .header .top__header {
+            background-color: var(--var-body-bg);
+        }
+
+        .header .header__link,
+        #header__link {
+            color: var(--var-header-link);
+        }
+
+        #header__link::after {
+            border-top: 5px solid var(--var-header-link);
+        }
+
+        #modal-content {
+            display: none;
+            position: fixed;
+            z-index: 9999999;
+            background: #FFF;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            max-width: 521px;
+            width: 100%;
+            text-align: center;
+            padding: 10px 20px;
+            border: 4px solid #337AB7;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 16px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        #modal-close {
+            display: inline-block;
+            margin: 10px 6px 4px 6px;
+            text-decoration: none;
+            position: relative;
+            font-size: 16px;
+            padding: 8px 16px;
+            color: #FFF;
+            font-weight: bold;
+            text-transform: uppercase;
+            background: #337AB7;
+        }
+
+        #modal-close:hover {
+            color: #FFF;
+        }
+
+        #modal-close:after,
+        #modal-close:before {
+            position: absolute;
+            height: 2px;
+            left: 50%;
+            background: #337AB7;
+            bottom: -6px;
+            content: "";
+            transition: all 280ms ease-in-out;
+            width: 0;
+        }
+
+        #modal-close:before {
+            top: -6px;
+        }
+
+        #modal-close:hover:after,
+        #modal-close:hover:before {
+            width: 100%;
+            left: 0;
+        }
+    </style>
+
+    <script>
+        setTimeout(function () {
+            const modalwin = document.getElementById('modal-content');
+            modalwin.style.display = "block";
+            document.getElementById("modal-close").addEventListener("click", function () {
+                modalwin.style.display = "none";
+            });
+        }, 1000);
+    </script>
+</body>
+
+</html>
