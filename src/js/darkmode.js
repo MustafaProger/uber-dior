@@ -57,6 +57,7 @@ $(".label-dark").click(function () {
     stayDark();
   }
 });
+
 window.onload = function () {
   if (localStorage.darkmode == "true") {
     console.log("User manually selected dark mode from a past session");
@@ -91,19 +92,3 @@ $(window).resize(function () {
     tempDisableAnim();
   }, 0);
 });
-
-function refreshFavicon() {
-  if (matchMedia('(prefers-color-scheme: dark)').matches) {
-    var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
-    link.type = 'image/x-icon';
-    link.rel = 'icon';
-    link.href = 'favicon-dark.svg';
-    document.getElementsByTagName('head')[0].appendChild(link);
-  } else {
-    var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
-    link.type = 'image/x-icon';
-    link.rel = 'icon';
-    link.href = 'favicon.svg';
-    document.getElementsByTagName('head')[0].appendChild(link);
-  }
-}

@@ -1,3 +1,6 @@
+@import 'variables'
+@import 'mixins'	
+	
 .toptitle
 	@include toptitle__style
 .title
@@ -69,12 +72,12 @@ a
 		padding: 0 10px 0 0
 	&__link
 		display: block 
-		color: white
+		color: $color2 
 		font-size: 18px
 		transition: all .3s ease-in-out 0s
 		&:hover 
 			cursor: pointer
-			color: $color5 !important
+			color: $color5
 			text-decoration: none
 	.top__header 
 		position: fixed
@@ -83,27 +86,29 @@ a
 		z-index: 5
 		width: 100%
 		height: 70px
-		background-color: $color2
+		background-color: $color3
+		transition: all .3s ease-in-out 0s
+
 .subheader 
 	position: absolute
 	top: 70px
 	left: 0
 	width: 100%
 	height: 87px
-	background-color: rgba(0, 0, 0, 0.6)
+	background-color: rgba(231, 231, 231, 0.6)
 	.logo__link 
 		display: block
 		margin-top: 16px
 	.logo__text 
 		margin-top: 4px
-		color: $color3
+		color: $color2
 		font-size: 13px
 		font-style: normal
 		font-weight: 100
-		opacity: 0.6
+		opacity: 1
 	.call__text
 		display: block
-		color: $color3
+		color: $color2
 		text-align: right
 		font-size: 12px
 		font-style: normal
@@ -113,16 +118,21 @@ a
 	.phone 
 		display: block
 		margin-top: -5px
-		color: $color3
+		color: $color16
 		font-size: 21.9px
 		font-weight: 400
 		line-height: 12px
 		text-align: right
+		&:hover
+			cursor: pointer
+			color: $color2
+
 	.call-btn
 		padding: 0
 		.phone 
 			text-align: left
 			.btn
+				cursor: pointer
 				margin-top: 20px
 				margin-left: 22px
 				padding: 0px 7px
@@ -133,6 +143,7 @@ a
 				font-size: 14px
 				line-height: 46px
 				text-transform: uppercase
+
 .call__text__phone
 	padding-left: 0
 	margin-left: auto
@@ -164,22 +175,25 @@ a
 		font-size: 18px
 		font-weight: 200
 		line-height: 24px
-	&__btn 
-		color: $color3
-		text-align: center
-		font-size: 16px
-		line-height: 63px
-		text-transform: uppercase
-		border: none
-		border-radius: 4px
-		background: linear-gradient(0deg, $color5 0%, #4CE2FF 100%)
-		margin: 100px 0 0 0
-		padding: 0 50px
-		&:hover
-			background: #4ce1ffcd
+	a
+		cursor: pointer
+		padding: 20px 0
+		.promo__btn
+			cursor: pointer
+			color: $color3
+			text-align: center
+			font-size: 16px
+			line-height: 63px
+			text-transform: uppercase
+			border: none
+			border-radius: 4px
+			background: linear-gradient(0deg, $color5 0%, #4CE2FF 100%)
+			margin: 100px 0 0 0
+			padding: 0 50px
 
 .advantage 
 	padding: 30px 10px 50px 10px
+	transition: .3s ease-in-out 
 	.row
 		.advantage__block
 			width: 100%
@@ -201,8 +215,9 @@ a
 			font-weight: 300
 			line-height: 21px
 .mobile
-	background: url('../img/mobile_bg.png') center (center / cover) no-repeat
+	background: url('../img/mobile_bg/mobile_bg.png') center (center / cover) no-repeat
 	padding: 45px 0
+	transition: .3s ease-in-out
 	&__content
 		.mobile__content-block-1
 			background: url('../img/mobile_cards/card-1.png') center (center / cover) no-repeat
@@ -267,7 +282,7 @@ a
 	padding: 45px 0 150px 0
 	width: 100%
 	height: 100%
-	background: $color2 url("../img/mobile_bg.png") 0px 500px no-repeat
+	background: $color2 url("../img/mobile_bg/mobile_bg.png") 0px 500px no-repeat
 	background-size: 100%
 	.toptitle
 		background-color: $color3
@@ -279,6 +294,7 @@ a
 		padding-top: 45px
 		max-width: 100%
 	.subtext_car
+		color: $color2
 		text-align: center
 		font-size: 18px
 		font-weight: 300
@@ -302,13 +318,14 @@ a
 				padding: 3.5px 0
 				margin-left: 45px
 				font-weight: normal
+				transition: all 0s ease-in-out 0s
 				&::before
 					content: url('../icons/сheck_mark_done-blue.png')
 					position: absolute
 					left: -30px
 					top: 4px
 		.list_3, .list_4
-			list-style: none			
+			list-style: none
 			.title__list-red
 				color: $color7
 				margin-bottom: 20px
@@ -317,6 +334,7 @@ a
 				padding: 3.5px 0
 				margin-left: 45px
 				font-weight: normal
+				transition: all 0s ease-in-out 0s
 				&::before
 					content: url('../icons/сheck_mark_done-red.png')
 					position: absolute
@@ -326,7 +344,7 @@ a
 .world
 	background-color: $color8
 	.container 
-		background: url('../img/world_bg.png') center (center / cover) no-repeat 
+		background: url('../img/world/world_bg.png') center (center / cover) no-repeat 
 		padding: 45px 0 0px 0
 		.content
 			height: 550px
@@ -367,7 +385,7 @@ a
 		padding-top: 25px
 		.facebook
 			padding: 2.5px 6px
-			margin-left: 25px !important
+			margin-left: 25px 
 		.twitter
 			padding: 2.5px 6px
 		.linkdedin
@@ -424,7 +442,9 @@ a
 			padding: 0 3px
 			
 #header__link
-	color: white
+	color: #000
+	&:hover
+		color: $color5 !important
 
 #header__link::after 
 	content: ""
@@ -436,7 +456,7 @@ a
 	margin: 10px 0 10px 98px
 	border-left: 5px solid transparent
 	border-right: 5px solid transparent
-	border-top: 5px solid $color3
+	border-top: 5px solid $color2
 	z-index: 1
 	opacity: 1
 	transition: all .3s ease-in-out 0s

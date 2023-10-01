@@ -3,7 +3,7 @@
         position: relative
     .logo_without_text::before 
         content: "U B E R"
-        color: #ffffff
+        color: #000
         position: absolute
         display: block
         z-index: 15
@@ -17,7 +17,6 @@
         top: 0
         left: 0
         z-index: 2
-        // height: 54px !important
         &::before 
             content: ""
             position: absolute
@@ -25,8 +24,10 @@
             left: 0
             width: 100%
             height: 100%
-            background-color: #000000
+            background-color: #fff
             z-index: 2
+            transition: all .3s ease-in-out 0s
+
     .header__burger 
         display: block
         position: relative
@@ -39,7 +40,7 @@
         margin-left: auto
         &::before, &::after 
             content: ""
-            background-color: #ffffff
+            background-color: #000
             position: absolute
             width: 100%
             height: 2px
@@ -52,14 +53,14 @@
             transform: rotate(45deg)
             top: 6.5px
             transition: ease-in .3s
-            background-color: #ffffff
+            background-color: #000
         &.active::after 
             transform: rotate(-45deg)
             bottom: 6.5px
             transition: ease-in .3s
-            background-color: #ffffff
+            background-color: #000
         span
-            background-color: #fff;
+            background-color: #000;
             position: absolute;
             left: 0;
             height: 2px;
@@ -69,9 +70,8 @@
     .header__burger.active span 
         transform: scale(0);
         transition: ease-in .3s;
-        background-color: #fff;
+        background-color: #000;
 
-                
     .header__menu 
         position: fixed
         top: 0
@@ -79,7 +79,7 @@
         width: 100%
         height: 100%
         overflow: auto
-        background-color: #212121
+        background-color: #DCE0E3
         padding: 50px 0 0 0
         opacity: 0.9
         transition: ease-in .3s
@@ -114,9 +114,10 @@
                     .dropdown-item
                         margin: 0
                         text-align: left
+                        color: #000000 
                         &:hover
                             background: none
-                            color: #1EACC7
+                            color: #1EACC7 !important
                     .dropdown-item_3
                         padding-bottom: 0
                 .dropdown-menu.show
@@ -162,7 +163,7 @@
             filter: brightness(70%)
             background-color: rgba(0, 0, 0, 0)
         .subheader.lock
-            background-color: rgba(0, 0, 0, 0.5) !important
+            background-color: rgba(256, 256, 256, 0.5)
             position: absolute
             left: 0
             z-index: 300px
