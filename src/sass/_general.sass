@@ -22,13 +22,23 @@ a
 	left: 0
 	z-index: 5
 	width: 100%
+	&__content
+		display: flex
+		align-items: center
+		justify-content: center
+	&__menu
+		display: flex
+		align-items: center
+		justify-content: space-evenly
 	&__list 
 		display: flex
 		justify-content: space-between
 		list-style-type: none
 		padding: 23px 0px
+		margin-bottom: 5px
+		width: 100%
 		li 
-			padding: 0 10px
+			padding: 0 15px
 		.dropdown
 			display: block
 			position: relative
@@ -55,6 +65,8 @@ a
 				left: -20px
 				top: 43px
 				width: 180px
+	.dark
+		padding: 0 10px 0 0
 	&__link
 		display: block 
 		color: white
@@ -421,7 +433,7 @@ a
 	position: absolute
 	left: 0
 	top: 0
-	margin: 10px 0 10px 100px
+	margin: 10px 0 10px 98px
 	border-left: 5px solid transparent
 	border-right: 5px solid transparent
 	border-top: 5px solid $color3

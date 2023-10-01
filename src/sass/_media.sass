@@ -1,7 +1,9 @@
 @media (max-width: 1200px) 
-
-	.header__link
-		font-size: 99%
+	.header__list
+		li
+			padding: 0 10px
+		.header__link
+			font-size: 95% 
 	.logo__block
 		.logo
 			width: 90%
@@ -60,14 +62,32 @@
 	a#download__item_3
 		margin-top: 70px 
 	#header__link::after 
-		margin: 10px 0 10px 90px;
+		margin: 8px 0 10px 81px
 
 @media (max-width: 930px) 
-
-	.header__link
-		font-size: 20px
-		display: 
-		padding: 10px 10px
+	.header
+		&__content
+			display: block
+			.dark
+				padding: 0px 0 0 10px
+				margin: 0 0 20px 0
+				position: absolute
+				top: 22px
+				right: 70px
+				z-index: 999
+				.label-dark, 
+				.label-light 
+					display: block
+					margin: 0
+					padding: 10px
+		&__menu
+			display: block
+			padding: 80px 0 0 0 !important
+	.header__list
+		padding: 0 0 0 0 !important
+		.header__link
+			font-size: 20px
+			padding: 10px 10px
 	.subheader 
 		height: 75px
 		.row
@@ -146,12 +166,12 @@
 			font-size: 16px
 
 	#header__link
-		padding: 0 0 0 10px
+		padding: 0 0 0 15px
 
 	#header__link:after 
 		margin-left: 120px
 		margin-top: 21px
-
+	
 @media (max-width: 813px) 
 
 	.subheader
