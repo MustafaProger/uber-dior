@@ -57,7 +57,6 @@ $(".label-dark").click(function () {
     stayDark();
   }
 });
-
 window.onload = function () {
   if (localStorage.darkmode == "true") {
     console.log("User manually selected dark mode from a past session");
@@ -75,20 +74,7 @@ window.onload = function () {
   }
 };
 
-function tempDisableAnim() {
-  $("*").addClass("disableEasingTemporarily");
-  setTimeout(function () {
-    $("*").removeClass("disableEasingTemporarily");
-  }, 20);
+
+function refreshFavicon() {
+  matchMedia('(prefers-color-scheme: dark)').matches
 }
-setTimeout(function () {
-  $(".load-flash").css("display", "none");
-  $(".load-flash").css("visibility", "hidden");
-  tempDisableAnim();
-}, 20);
-$(window).resize(function () {
-  tempDisableAnim();
-  setTimeout(function () {
-    tempDisableAnim();
-  }, 0);
-});

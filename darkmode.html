@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="os-default">
 
 <head>
     <meta charset="UTF-8">
@@ -20,22 +20,18 @@
 </head>
 
 <body>
-
     <main class="main__page">
         <header class="header">
             <div class="top__header">
                 <div class="container">
-                    <!-- <div id="modal-content">
-                        <p>Хочешь darkmode (lightmode), тогда поменяй тему на своем устройстве и он будет активирован!</p>
-                        <a id="modal-close" href="#close">Ого, прикольно</a>
-                    </div> -->
+
                     <div class="header__content">
                         <div class="logo_without_text"></div>
                         <div class="header__burger">
                             <span></span>
                         </div>
                         <section class="dark">
-                            <div class="load-flash"></div>
+                            <div class="load-flash" style="display: none; visibility: hidden;"></div>
                             <div class="mode-toggle noselect">
                                 <div class="toggle-switch"></div>
                             </div>
@@ -65,103 +61,6 @@
             </div>
         </header>
     </main>
-
-    <!-- <style>
-        :root {
-            --var-body-bg: #fff;
-            --var-body-fc: #333;
-            --var-header-bg: #eee;
-            --var-header-link: #000;
-        }
-
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --var-body-bg: #333;
-                --var-body-fc: #fff;
-                --var-header-bg: #eee;
-                --var-header-link: #fff;
-            }
-        }
-
-        .header .top__header {
-            background-color: var(--var-body-bg);
-        }
-
-        .header .header__link,
-        #header__link {
-            color: var(--var-header-link);
-        }
-
-        #header__link::after {
-            border-top: 5px solid var(--var-header-link);
-        }
-
-        #modal-content {
-            display: none;
-            position: fixed;
-            z-index: 9999999;
-            background: #FFF;
-            top: 50%;
-            left: 50%;
-            transform: translateX(-50%) translateY(-50%);
-            max-width: 521px;
-            width: 100%;
-            text-align: center;
-            padding: 10px 20px;
-            border: 4px solid #337AB7;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 16px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        #modal-close {
-            display: inline-block;
-            margin: 10px 6px 4px 6px;
-            text-decoration: none;
-            position: relative;
-            font-size: 16px;
-            padding: 8px 16px;
-            color: #FFF;
-            font-weight: bold;
-            text-transform: uppercase;
-            background: #337AB7;
-        }
-
-        #modal-close:hover {
-            color: #FFF;
-        }
-
-        #modal-close:after,
-        #modal-close:before {
-            position: absolute;
-            height: 2px;
-            left: 50%;
-            background: #337AB7;
-            bottom: -6px;
-            content: "";
-            transition: all 280ms ease-in-out;
-            width: 0;
-        }
-
-        #modal-close:before {
-            top: -6px;
-        }
-
-        #modal-close:hover:after,
-        #modal-close:hover:before {
-            width: 100%;
-            left: 0;
-        }
-    </style> -->
-
-    <!-- <script>
-        setTimeout(function () {
-            const modalwin = document.getElementById('modal-content');
-            modalwin.style.display = "block";
-            document.getElementById("modal-close").addEventListener("click", function () {
-                modalwin.style.display = "none";
-            });
-        }, 1000);
-    </script> -->
-
     <script src="src/js/darkmode.js"></script>
 
 </body>
