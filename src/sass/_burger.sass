@@ -46,7 +46,7 @@
             position: absolute
             width: 100%
             height: 2px
-            transition: ease-in .3s
+            transition: ease-in .1s
         &::before 
             top: -5px 
         &::after 
@@ -54,12 +54,12 @@
         &.active::before 
             transform: rotate(45deg)
             top: 6.5px
-            transition: ease-in .3s
+            transition: ease-in .1s
             background-color: #000
         &.active::after 
             transform: rotate(-45deg)
             bottom: 6.5px
-            transition: ease-in .3s
+            transition: ease-in .1s
             background-color: #000
         span
             background-color: #000
@@ -68,10 +68,10 @@
             height: 2px;
             width: 100%;
             top: 5px;
-            transition: ease-in .3s
+            transition: ease-in .1s
     .header__burger.active span 
         transform: scale(0);
-        transition: ease-in .3s
+        transition: ease-in .1s
         background-color: #000
 
     .header__menu 
@@ -84,12 +84,12 @@
         background-color: #DCE0E3
         padding: 50px 0 0 0
         opacity: 0.9
-        transition: ease-in .3s
+        transition: ease-in .1s
         &.active 
             position: fixed
             right: 0
             width: 290px
-            transition: ease-in .3s
+            transition: ease-in .1s
     .header__list 
         display: flex
         flex-direction: column
@@ -153,12 +153,10 @@
         .world.lock,
         .footer.lock,
         .cities.lock,
-        .yourcar.lock
+        .yourcar.lock,
+        .ourcar.lock
             filter: brightness(50%)
             background-color: rgba(0, 0, 0, 0)
-        .cities.lock,
-        .yourcar.lock
-            background-color: rgba(0, 0, 0, 1)
         .footer.lock
             filter: brightness(70%)
             background-color: rgba(0, 0, 0, 0)

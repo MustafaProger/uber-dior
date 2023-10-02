@@ -13,6 +13,7 @@ $(document).ready(function () {
         $(".footer").toggleClass('lock')
         $(".cities").toggleClass('lock')
         $(".yourcar").toggleClass('lock')
+        $(".ourcar").toggleClass('lock')
     });
 });
 

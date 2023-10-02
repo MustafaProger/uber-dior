@@ -1,5 +1,5 @@
 document.getElementById('footer').innerHTML = '\
-<section class="footer">\
+<section class="footer" style="padding: 20px 0 40px 0">\
     <div class="line"></div>\
     <div class="content row">\
         <div class="col-md-3 order_media">\
