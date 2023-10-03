@@ -14,6 +14,7 @@ $(document).ready(function () {
         $(".cities").toggleClass('lock')
         $(".yourcar").toggleClass('lock')
         $(".ourcar").toggleClass('lock')
+        $(".request").toggleClass('lock')
     });
 });
 

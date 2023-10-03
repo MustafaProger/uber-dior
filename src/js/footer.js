@@ -22,7 +22,7 @@ document.getElementById('footer').innerHTML = '\
                 <div class="toplink">\
                     <a href="index.html#promo" class="toplink__item">На главную</a>\
                     <a href="cities.html" class="toplink__item" style="padding: 0 10px">Города</a>\
-                    <a href="#" class="toplink__item">Для водителей</a>\
+                    <a href="request.html" class="toplink__item">Для водителей</a>\
                 </div>\
                 <div class="sublink">\
                     <a href="#" class="sublink__item">Центр поддержки</a>\
