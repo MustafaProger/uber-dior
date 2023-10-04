@@ -51,10 +51,10 @@
                 <input type="text" id="firstName" name="firstName" placeholder="Имя" required>
                 <input type="text" id="lastName" name="lastName" placeholder="Фамилия" required>
 
-                <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" placeholder="Телефон"
-                    required>
+                <input type="tel" id="phoneNumber" name="phoneNumber" pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$"
+                    placeholder="Телефон" required>
 
-                <input type="email" id="email" name="email" placeholder="Email">
+                <input type="email" id="email" pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-zA-Z]{2,4} name="email" placeholder="Email" required>
 
                 <select id="carType" name="carType" required>
                     <option value="ownCar">На своей машине</option>
@@ -155,9 +155,8 @@
                     <option value="Ярославль">Ярославль</option>
                 </select>
 
-
-                <textarea id="additionalInfo" name="additionalInfo" placeholder="Дополнительные сведения"
-                    cols="30" rows="10"></textarea>
+                <textarea id="additionalInfo" name="additionalInfo" placeholder="Дополнительные сведения" cols="30"
+                    rows="10"></textarea>
 
                 <button class="btn" type="submit">Отправить</button>
             </form>
@@ -170,6 +169,10 @@
     </footer>
 
     <script src="src/js/darkmode.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+    <script>
+        $("#phoneNumber").mask("+7 (999) 999-99-99")
+    </script>
 </body>
 
 </html>
