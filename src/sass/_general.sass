@@ -115,9 +115,12 @@ a
 		font-weight: 300
 		opacity: 0.6
 		margin-top: 13px
-	.phone 
-		display: block
-		margin-top: -5px
+	.phone
+		position: absolute
+		top: 40px
+		right: 12px
+		display: inline
+		margin-top: 5px
 		color: $color16
 		font-size: 21.9px
 		font-weight: 400
@@ -126,15 +129,15 @@ a
 		transition: all 0s ease-in-out 0s
 		&:hover
 			cursor: pointer
-			color: $color2
+	
+
 
 	.call-btn
 		padding: 0
-		.phone 
-			text-align: left
+		.phone__btn 
 			.btn
 				cursor: pointer
-				margin-top: 20px
+				margin-top: 15px
 				margin-left: 22px
 				padding: 0px 7px
 				border: none
@@ -144,6 +147,10 @@ a
 				font-size: 14px
 				line-height: 46px
 				text-transform: uppercase
+				margin-right: auto
+				transition: 0.25s
+				&:hover 
+					box-shadow: 0 0 15px #1EACC7
 
 .call__text__phone
 	padding-left: 0
@@ -191,6 +198,10 @@ a
 			background: linear-gradient(0deg, $color5 0%, #4CE2FF 100%)
 			margin: 100px 0 0 0
 			padding: 0 50px
+			transition: 0.25s
+			&:hover 
+				box-shadow: 0 0 15px #1EACC7
+
 
 .advantage 
 	padding: 30px 10px 50px 10px

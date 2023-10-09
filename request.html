@@ -47,23 +47,24 @@
             </div>
 
             <!-- Форма для оставления заявки -->
-            <form action="обработчик.php" method="POST">
-                <input type="text" id="firstName" name="firstName" placeholder="Имя" required>
-                <input type="text" id="lastName" name="lastName" placeholder="Фамилия" required>
+            <form method="POST" id="form" class="form__body">
+                <input type="text" id="firstName" name="firstName" placeholder="Имя" class="form__input _req">
+                <input type="text" id="lastName" name="lastName" placeholder="Фамилия" class="form__input _req">
 
                 <input type="tel" id="phoneNumber" name="phoneNumber" pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$"
-                    placeholder="Телефон" required>
+                    placeholder="Телефон" class="form__input _req">
 
-                <input type="email" id="email" pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-zA-Z]{2,4} name="email" placeholder="Email" required>
+                <input type="email" id="email" name="email"
+                    placeholder="Email" class="form__input _req _email">
 
-                <select id="carType" name="carType" required>
+                <select id="carType" name="carType">
                     <option value="ownCar">На своей машине</option>
                     <option value="companyCar">На машине компании</option>
                     <option value="companyCar">На машине компании и на своей машине</option>
                     <option value="companyCar">Пока не определился</option>
                 </select>
 
-                <input type="text" id="experience" name="experience" placeholder="Опыт вождения" required>
+                <input type="text" id="experience" name="experience" placeholder="Опыт вождения" class="form__input _req">
 
                 <select name="cities" id="cities">
                     <option value="Архангельск">Город</option>
