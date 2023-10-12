@@ -19,7 +19,7 @@
     <title>Оставить заявку</title>
 </head>
 
-<body>
+<body id="body" class="form__body">
     <nav id="navbar">
         <script src="src/js/navbar.js"></script>
     </nav>
@@ -47,7 +47,7 @@
             </div>
 
             <!-- Форма для оставления заявки -->
-            <form method="POST" id="form" class="form__body">
+            <form method="POST" id="form" action="#">
                 <input type="text" id="firstName" name="firstName" placeholder="Имя" class="form__input _req">
                 <input type="text" id="lastName" name="lastName" placeholder="Фамилия" class="form__input _req">
 
