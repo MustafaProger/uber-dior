@@ -20,16 +20,16 @@ document.getElementById('footer').innerHTML = '\
         <div class="col-md-6 order_link">\
             <div class="link">\
                 <div class="toplink">\
-                    <a href="index.html#promo" class="toplink__item">На главную</a>\
-                    <a href="cities.html" class="toplink__item" style="padding: 0 10px">Города</a>\
-                    <a href="request.html" class="toplink__item">Для водителей</a>\
+                    <a href="index.html#promo" class="toplink__item">home</a>\
+                    <a href="cities.html" class="toplink__item" style="padding: 0 10px">cities</a>\
+                    <a href="request.html" class="toplink__item">for driver</a>\
                 </div>\
                 <div class="sublink">\
-                    <a href="#" class="sublink__item">Центр поддержки</a>\
-                    <a href="#" class="sublink__item">Вакансии</a>\
-                    <a href="#" class="sublink__item">Разработчики</a>\
-                    <a href="#" class="sublink__item">Блог</a>\
-                    <a href="#" class="sublink__item">О нас</a>\
+                    <a href="#" class="sublink__item">Support</a>\
+                    <a href="#" class="sublink__item">Jobs</a>\
+                    <a href="#" class="sublink__item">Developers</a>\
+                    <a href="#" class="sublink__item">Blog</a>\
+                    <a href="#" class="sublink__item">About us</a>\
                 </div>\
                 <div class="language">\
                     <select id="language-select">\
@@ -56,4 +56,12 @@ document.getElementById('footer').innerHTML = '\
         </div>\
     </div>\
 </section>\
+<style>\
+    .footer .link .toplink .toplink__item {\
+        font-size: 19px;\
+    }\
+    .footer .link .sublink .sublink__item {\
+        font-size: 14px\
+    }\
+</style>\
 '

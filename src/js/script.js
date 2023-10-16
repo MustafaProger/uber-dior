@@ -109,7 +109,8 @@ languageSelect.value = currentFolder;
 
 // Функция для загрузки контента на определенном языке
 function loadLanguageContent(language) {
-    const contentUrl = language + '/content.html';
+    const contentUrl = language + '/cities.html';
+    
 
     // Используем AJAX или Fetch для загрузки контента
     fetch(contentUrl)
@@ -127,7 +128,7 @@ languageSelect.addEventListener("change", function () {
     const selectedLanguage = languageSelect.value;
 
     // Обновляем URL, чтобы перейти в соответствующую папку и перезагрузить страницу
-    window.location.href = '../' + selectedLanguage + '/content.html';
+    window.location.href = '../' + selectedLanguage + '/cities.html';
 });
 
 // Загрузка контента при загрузке страницы
