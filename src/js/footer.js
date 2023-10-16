@@ -32,7 +32,10 @@ document.getElementById('footer').innerHTML = '\
                     <a href="#" class="sublink__item">О нас</a>\
                 </div>\
                 <div class="language">\
-                    <a href="#" class="">Русский</a>\
+                    <select id="language-select">\
+                        <option value="ru">Русский</option>\
+                        <option value="en">English</option>\
+                    </select>\
                 </div>\
             </div>\
         </div>\

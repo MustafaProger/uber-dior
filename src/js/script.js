@@ -21,8 +21,6 @@ $(document).ready(function () {
     });
 });
 
-
-
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById('form');
     const body = document.getElementById('body');
@@ -97,3 +95,40 @@ document.addEventListener("DOMContentLoaded", function () {
        return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
     }
 });
+
+
+// Получаем select и контейнер для контента
+const languageSelect = document.getElementById("language-select");
+const contentContainer = document.getElementById("content");
+
+// Получаем имя текущей папки (RU или EN) из URL
+const currentFolder = window.location.pathname.split("/")[1];
+
+// Устанавливаем выбранное значение в select в соответствии с текущей папкой
+languageSelect.value = currentFolder;
+
+// Функция для загрузки контента на определенном языке
+function loadLanguageContent(language) {
+    const contentUrl = language + '/content.html';
+
+    // Используем AJAX или Fetch для загрузки контента
+    fetch(contentUrl)
+        .then(response => response.text())
+        .then(data => {
+            contentContainer.innerHTML = data;
+        })
+        .catch(error => {
+            console.error("Ошибка загрузки контента: " + error);
+        });
+}
+
+// Слушаем событие изменения select
+languageSelect.addEventListener("change", function () {
+    const selectedLanguage = languageSelect.value;
+
+    // Обновляем URL, чтобы перейти в соответствующую папку и перезагрузить страницу
+    window.location.href = '../' + selectedLanguage + '/content.html';
+});
+
+// Загрузка контента при загрузке страницы
+loadLanguageContent(currentFolder);

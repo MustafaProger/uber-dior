@@ -9,10 +9,16 @@
     $mail = new PHPMailer(true);
     $mail->CharSet = 'UTF-8';
     $mail->setLanguage('ru', 'PHPMailer/language');
-    $mail->IsHTML(true);
+    $mail->Host = "smtp.yandex.ru";
+
+    // optional
+    // used only when SMTP requires authentication  
+    $mail->SMTPAuth = true;
+    $mail->Username = 'diertojiev@yandex.ru';
+    $mail->Password = 'Teakwondo2019@';
 
 
-    $mail->setFrom('info@fls.guru', "DIOR's site");
+    $mail->setFrom('diertojiev@yandex.ru', "DIOR's site");
     $mail->addAddress("diertojiev@yandex.ru");
     $mail->Subject = "Привет, это DIOR";
 
