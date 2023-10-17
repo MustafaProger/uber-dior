@@ -96,7 +96,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-
 // Получаем select и контейнер для контента
 const languageSelect = document.getElementById("language-select");
 const contentContainer = document.getElementById("content");
@@ -110,7 +109,6 @@ languageSelect.value = currentFolder;
 // Функция для загрузки контента на определенном языке
 function loadLanguageContent(language) {
     const contentUrl = language + '/cities.html';
-    
 
     // Используем AJAX или Fetch для загрузки контента
     fetch(contentUrl)

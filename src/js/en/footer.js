@@ -32,6 +32,7 @@ document.getElementById('footer').innerHTML = '\
                     <a href="#" class="sublink__item">About us</a>\
                 </div>\
                 <div class="language">\
+                    <span></span>\
                     <select id="language-select">\
                         <option value="ru">Русский</option>\
                         <option value="en">English</option>\
@@ -62,6 +63,53 @@ document.getElementById('footer').innerHTML = '\
     }\
     .footer .link .sublink .sublink__item {\
         font-size: 14px\
+    }\
+    .language span::after {\
+        content: "English";\
+        position: absolute;\
+        color: #1FABC7;\
+        left: 45%;\
+        top: 75%;\
+        width: 0%;\
+        height: 0%;\
+        z-index: 3;\
+    }\
+\
+    @media (max-width: 1200px){\
+        .language span::after {\
+            left: 44%;\
+        }\
+    }\
+    @media (max-width: 930px) {\
+        .language span::after {\
+            left: 42%;\
+        }\
+    }\
+    @media (max-width: 767px) {\
+        .language span::after {\
+            left: 45%;\
+        }\
+    }\
+    @media (max-width: 575px) {\
+        .language span::after {\
+            left: 44%;\
+        }\
+    }\
+    @media (max-width: 500px) {\
+        .language span::after {\
+            left: 43%;\
+        }\
+    }\
+    @media (max-width: 500px) {\
+        .language span::after {\
+            left: 42%;\
+        }\
+    }\
+    @media (max-width: 358px) {\
+        .language span::after {\
+            top: 78%;\
+            left: 41%;\
+        }\
     }\
 </style>\
 '
