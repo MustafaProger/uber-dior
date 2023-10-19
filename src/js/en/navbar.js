@@ -47,4 +47,34 @@ document.getElementById("navbar").innerHTML = '\
             </div>\
         </div>\
     </header>\
+<style>\
+    .header__list {\
+        padding: 17px 0px;\
+    }\
+    .header__link {\
+        font-size: 25px;\
+    }\
+    #header__link::after {\
+        margin: 14px 0 10px 116px;\
+    }\
+    .header__list .dropdown .dropdown-menu .dropdown-item {\
+        font-size: 16px;\
+    }\
+    @media (max-width: 1200px){\
+        .header__list {\
+            padding: 20px 0px;\
+        }\
+        .header__list li {\
+            font-size: 20px;\
+        }\
+        #header__link::after {\
+            margin: 10px 0 10px 100px;\
+        }\
+    }\
+    @media (max-width: 930px) {\
+        #header__link::after {\
+            margin: 21px 0 10px 113px;\
+        }\
+    }\
+</style>\
 '
