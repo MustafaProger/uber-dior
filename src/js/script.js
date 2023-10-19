@@ -96,38 +96,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-// Получаем select и контейнер для контента
-const languageSelect = document.getElementById("language-select");
-const contentContainer = document.getElementById("content");
+// Слушаем событие клика по кнопке
+document.getElementById('languageButton').addEventListener('click', function () {
+    // Получаем текущий URL страницы
+    var currentURL = window.location.href;
 
-// Получаем имя текущей папки (RU или EN) из URL
-const currentFolder = window.location.pathname.split("/")[1];
-
-// Устанавливаем выбранное значение в select в соответствии с текущей папкой
-languageSelect.value = currentFolder;
-
-// Функция для загрузки контента на определенном языке
-function loadLanguageContent(language) {
-    const contentUrl = language + '/cities.html';
-
-    // Используем AJAX или Fetch для загрузки контента
-    fetch(contentUrl)
-        .then(response => response.text())
-        .then(data => {
-            contentContainer.innerHTML = data;
-        })
-        .catch(error => {
-            console.error("Ошибка загрузки контента: " + error);
-        });
-}
-
-// Слушаем событие изменения select
-languageSelect.addEventListener("change", function () {
-    const selectedLanguage = languageSelect.value;
-
-    // Обновляем URL, чтобы перейти в соответствующую папку и перезагрузить страницу
-    window.location.href = '../' + selectedLanguage + '/cities.html';
+    // Проверяем, на каком языке сейчас страница
+    if (currentURL.indexOf('/en/') !== -1) {
+        // Если на английском, переключаемся на русский
+        window.location.href = currentURL.replace('/en/', '/ru/');
+    } else if (currentURL.indexOf('/ru/') !== -1) {
+        // Если на русском, переключаемся на английский
+        window.location.href = currentURL.replace('/ru/', '/en/');
+    }
 });
-
-// Загрузка контента при загрузке страницы
-loadLanguageContent(currentFolder);

@@ -32,11 +32,10 @@ document.getElementById('footer').innerHTML = '\
                     <a href="#" class="sublink__item">О нас</a>\
                 </div>\
                 <div class="language">\
-                    <span></span>\
-                    <select id="language-select">\
-                        <option value="ru">Русский</option>\
-                        <option value="en">English</option>\
-                    </select>\
+                    <button id="languageButton">\
+                        English\
+                        <img src="../src/icons/flag/uk-flag.png" alt="" style="width: 15px; height: 15px; margin: -3px 0;">\
+                    </button>\
                 </div>\
             </div>\
         </div>\
@@ -57,85 +56,4 @@ document.getElementById('footer').innerHTML = '\
         </div>\
     </div>\
 </section>\
-\
-<style>\
-    .footer .link .toplink .toplink__item {\
-        font-size: 19px;\
-    }\
-    .footer .link .sublink .sublink__item {\
-        font-size: 14px\
-    }\
-    .language span::after {\
-        content: "Русский";\
-        position: absolute;\
-        color: #1FABC7;\
-        left: 44%;\
-        top: 75%;\
-        width: 0%;\
-        height: 0%;\
-        z-index: 3;\
-    }\
-\
-    @media (max-width: 1200px){\
-        .language span::after {\
-            left: 42%;\
-        }\
-    }\
-    @media (max-width: 943px) {\
-        .language span::after {\
-            top: 80%;\
-            left: 41%;\
-        }\
-    }\
-    @media (max-width: 930px) {\
-        .language span::after {\
-            left: 39%;\
-        }\
-    }\
-    @media (max-width: 813px) {\
-        .language span::after {\
-            top: 86%;\
-            left: 40%;\
-        }\
-    }\
-    @media (max-width: 767px) {\
-        .language span::after {\
-            left: 44%;\
-            top: 75%;\
-        }\
-    }\
-    @media (max-width: 652px) {\
-        .language span::after {\
-            left: 43%;\
-        }\
-    }\
-    @media (max-width: 575px) {\
-        .language span::after {\
-            left: 42%;\
-        }\
-    }\
-    @media (max-width: 471px) {\
-        .language span::after {\
-            top: 80%;\
-            left: 41%;\
-        }\
-    }\
-    @media (max-width: 449px) {\
-        .language span::after {\
-            left: 40%;\
-        }\
-    }\
-    @media (max-width: 406px) {\
-        .language span::after {\
-            top: 86%;\
-            left: 40%;\
-        }\
-    }\
-    @media (max-width: 358px) {\
-        .language span::after {\
-            top: 85%;\
-            left: 38%;\
-        }\
-    }\
-</style>\
 '

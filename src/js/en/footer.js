@@ -32,11 +32,10 @@ document.getElementById('footer').innerHTML = '\
                     <a href="#" class="sublink__item">About us</a>\
                 </div>\
                 <div class="language">\
-                    <span></span>\
-                    <select id="language-select">\
-                        <option value="ru">Русский</option>\
-                        <option value="en">English</option>\
-                    </select>\
+                    <button id="languageButton">\
+                        Русский\
+                        <img src="../src/icons/flag/russian-flag.png" alt="" style="width: 15px; height: 15px; margin: -3px 0;">\
+                    </button>\
                 </div>\
             </div>\
         </div>\
