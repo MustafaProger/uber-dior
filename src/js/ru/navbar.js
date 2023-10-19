@@ -31,6 +31,17 @@ document.getElementById("navbar").innerHTML = '\
                         </li>\
                             <li><a href="request.html" class="header__link">Оставить заявку</a></li>\
                         </ul>\
+                        <div id="languageButtons">\
+                            <button id="ruButton" style="font-size: 20px; padding-left: 0">\
+                                Русский\
+                                <img src="../src/icons/flag/russian-flag.png" style="width: 15px; height: 15px; margin: -3px 0;" alt="">\
+                            </button>\
+                            <span>/<span>\
+                            <button id="enButton" style="font-size: 20px; padding-left: 2px">\
+                                English\
+                                <img src="../src/icons/flag/uk-flag.png" style="width: 15px; height: 15px; margin: -3px 0;" alt="">\
+                            </button>\
+                        </div>\
                     </nav>\
                 </div>\
             </div>\

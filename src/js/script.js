@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let formData = new FormData(form);
 
 
-        if(error === 0) {
+        if (error === 0) {
             body.classList.add('_sending');
             let response = await fetch('../../sendmail.php', {
                 method: "POST",
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 alert('Ошибка');
                 body.classList.remove('_sending');
             }
-            
+
         } else {
             alert('Заполните обязательные поля')
         }
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function emailTest(input) {
-       return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
+        return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
     }
 });
 
@@ -110,3 +110,21 @@ document.getElementById('languageButton').addEventListener('click', function () 
         window.location.href = currentURL.replace('/ru/', '/en/');
     }
 });
+
+// Слушаем событие клика по кнопке
+
+var currentURL = window.location.href;
+
+if (currentURL.indexOf('/en/') !== -1) {
+    // Если на английской странице, кнопка "English" неактивна
+    document.getElementById('enButton').disabled = true;
+    document.getElementById('ruButton').addEventListener('click', function () {
+        window.location.href = currentURL.replace('/en/', '/ru/');
+    });
+} else if (currentURL.indexOf('/ru/') !== -1) {
+    // Если на русской странице, кнопка "Русский" неактивна
+    document.getElementById('ruButton').disabled = true;
+    document.getElementById('enButton').addEventListener('click', function () {
+        window.location.href = currentURL.replace('/ru/', '/en/');
+    });
+}
