@@ -1,1 +1,1 @@
-# uber-dior/ru
+# uber-dior
