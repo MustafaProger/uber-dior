@@ -31,7 +31,7 @@ document.getElementById("navbar").innerHTML = '\
                         </li>\
                             <li><a href="request.html" class="header__link">Submit application</a></li>\
                         </ul>\
-                        <div id="languageButtons">\
+                        <div id="languageButtons" style="padding-top: 10px">\
                             <button id="ruButton" style="font-size: 20px; padding-left: 0">\
                                 Русский\
                                 <img src="../src/icons/flag/russian-flag.png" style="width: 15px; height: 15px; margin: -3px 0;" alt="">\
@@ -67,8 +67,11 @@ document.getElementById("navbar").innerHTML = '\
         .header__list li {\
             font-size: 20px;\
         }\
+        .header__link {\
+            font-size: 21px !important;\
+        }\
         #header__link::after {\
-            margin: 10px 0 10px 100px;\
+            margin: 12px 0 10px 95px;\
         }\
     }\
     @media (max-width: 930px) {\

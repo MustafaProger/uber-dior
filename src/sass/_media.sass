@@ -1,9 +1,18 @@
 @media (max-width: 1200px) 
-	.header__list
-		li
-			padding: 0 10px
-		.header__link
-			font-size: 95% 
+	.hi
+		.hi__block
+			.ru__block
+				.title
+					font-size: 30px
+			.en__block
+				.title
+					font-size: 30px
+	.header
+		.header__list
+			li
+				padding: 0 10px
+			.header__link
+				font-size: 15px
 	.logo__block
 		.logo
 			width: 90%
@@ -65,6 +74,31 @@
 		margin: 8px 0 10px 81px
 
 @media (max-width: 930px) 
+	.hi
+		height: 100%
+		.hi__block
+			width: 100%
+			flex-flow: column
+			padding-top: 100px
+			span
+				&::before
+					content: ''
+					top: 0
+					left: 0
+			.ru__block, .en__block
+				text-align: left
+				margin: 0 0 50px 0
+			.ru__block
+				.title
+					text-align: left
+					font-size: 27px
+				.btn
+			.en__block
+				.title
+					text-align: left
+					font-size: 27px
+				.btn
+
 	.header
 		.top__header
 			#languageButtons
@@ -86,12 +120,13 @@
 		&__menu
 			display: block
 			padding: 80px 0 0 0 !important
-	.header__list
-		padding: 0 0 0 0 !important
-		margin: 0
-		.header__link
-			font-size: 20px
-			padding: 10px 15px
+	.header
+		.header__list
+			padding: 0 0 0 0
+			margin: 0
+			.header__link
+				font-size: 20px 
+				padding: 10px 15px
 	.subheader 
 		height: 75px
 		.row
@@ -172,7 +207,7 @@
 			font-size: 16px
 
 	#header__link
-		padding: 0 0 0 15px
+		padding: 10px 0 10px 15px
 
 	#header__link:after 
 		margin-left: 120px
@@ -334,6 +369,21 @@
 		margin-top: 70px 
 
 @media (max-width: 375px) 
+	.hi
+		.hi__block
+			padding: 100px 0
+			span
+			.ru__block, .en__block
+				padding: 0 
+			.ru__block
+				.title
+				.btn
+					margin: 0
+			.en__block
+				margin: 100px 0 0 0
+				.title
+				.btn
+					margin: 0
 	.subheader
 		.row
 			.call-btn

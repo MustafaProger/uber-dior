@@ -46,7 +46,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 form.reset();
                 body.classList.remove('_sending');
             } else {
-                alert('Ошибка');
+                let result = await response.json();
+                alert(result.message);
                 body.classList.remove('_sending');
             }
 
