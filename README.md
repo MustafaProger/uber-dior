@@ -1,1 +1,1 @@
-# dior/ru
+# dior
