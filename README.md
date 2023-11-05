@@ -1,1 +1,1 @@
-# dior.github.io/ru
+# dior/ru
