@@ -36,7 +36,7 @@ document.getElementById("navbar").innerHTML = '\
                                 Русский\
                                 <img src="../src/icons/flag/russian-flag.png" style="width: 15px; height: 15px; margin: -3px 0;" alt="">\
                             </button>\
-                            <span>/<span>\
+                            <span>|<span>\
                             <button id="enButton" style="font-size: 20px; padding-left: 2px">\
                                 English\
                                 <img src="../src/icons/flag/uk-flag.png" style="width: 15px; height: 15px; margin: -3px 0;" alt="">\
