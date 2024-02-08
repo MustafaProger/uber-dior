@@ -24,6 +24,7 @@ $(document).ready(function () {
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById('form');
     const body = document.getElementById('body');
+    
     form.addEventListener('submit', formSend);
 
     async function formSend(e) {

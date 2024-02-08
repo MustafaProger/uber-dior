@@ -12,13 +12,13 @@ const uglify = require('gulp-uglify');
 gulp.task('server', function () {
     browserSync.init({
         server: {
-            baseDir: "src"
+            baseDir: "ru"
         }
     });
 });
 
 gulp.task('styles', function () {
-    return gulp.src("src/sass/*.+(scss|sass)")
+    return gulp.src("project/src/sass/*.+(scss|sass)")
         .pipe(sass({
             outputStyle: 'compressed'
         }).on('error', sass.logError))
@@ -30,22 +30,22 @@ gulp.task('styles', function () {
         .pipe(cleanCSS({
             compatibility: 'ie8'
         }))
-        .pipe(gulp.dest("src/css"))
+        .pipe(gulp.dest("project/src/css"))
         .pipe(browserSync.stream());
 });
 
 gulp.task('scripts', function () {
-    return gulp.src('src/js/*.js')
+    return gulp.src('project/src/js/*.js')
         .pipe(concat('allCode/scripts.min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('src/js'))
+        .pipe(gulp.dest('project/src/js'))
         .pipe(browserSync.stream());
 });
 
 gulp.task('watch', function () {
-    gulp.watch('src/sass/*.+(scss|sass)', gulp.parallel('styles'));
-    gulp.watch('src/js/*.js', gulp.parallel('scripts'));
-    gulp.watch('src/*.html').on("change", browserSync.reload);
+    gulp.watch('project/src/sass/*.+(scss|sass)', gulp.parallel('styles'));
+    gulp.watch('project/src/js/*.js', gulp.parallel('scripts'));
+    gulp.watch('project/src/*.html').on("change", browserSync.reload);
 });
 
 gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'scripts'));
